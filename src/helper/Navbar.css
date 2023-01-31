@@ -1,0 +1,17 @@
+.navbar-item.has-text-white,
+.navbar-burger.burger {
+  transition: all 0.2s ease-in-out;
+}
+
+.navbar-burger.burger {
+  border-radius: 0.25rem;
+}
+
+.navbar-item.has-text-white:hover,
+.navbar-burger.burger:hover {
+  color: rgb(61, 61, 61) !important;
+}
+
+.navbar-burger.burger:hover {
+  background-color: #fafafa !important;
+}
