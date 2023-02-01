@@ -1,9 +1,8 @@
-import './Home.css';
 import pizzaPlanetImage from '../images/PizzaPlanet.png';
 
 function Home() {
   return (
-    <div className="hero has-background-primary is-fullwidth">
+    <div className="Home hero has-background-primary is-fullwidth has-shadow">
       <div className="hero-body">
         <div className="container">
           <div className="columns is-centered">

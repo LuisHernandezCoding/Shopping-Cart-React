@@ -1,7 +1,7 @@
 import ContactForm from '../helper/ContactForm';
 
 const Contact = () => (
-  <div className="hero has-background-primary is-fullwidth">
+  <div className="hero has-background-primary is-fullwidth has-shadow">
     <div className="hero-body">
       <div className="container">
         <h1 className="title is-1 is-spaced has-text-centered has-text-weight-bold has-text-white animate__animated animate__delay-1s animate__zoomIn">

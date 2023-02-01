@@ -12,7 +12,7 @@ const Navbar = () => {
           <a className="navbar-item animate__animated animate__delay animate__lightSpeedInLeft" href="/">
             <div className="is-size-3 has-text-centered has-text-weight-bold has-text-white is-flex is-flex-direction-row is-align-items-center">
               <img src={Logo} alt="Pizza Planet" className="image" />
-              <span className="ml-4">Pizza Planet</span>
+              <span className="ml-4 has-shadow">Pizza Planet</span>
             </div>
           </a>
           <button
@@ -35,16 +35,16 @@ const Navbar = () => {
         </div>
         <div className={`navbar-menu has-background-primary ${isActive ? 'is-active' : ''}`}>
           <div className="navbar-start animate__animated animate__delay animate__fadeInDown">
-            <a className="navbar-item has-text-white" href="/">
+            <a className="navbar-item has-text-white has-text-weight-bold is-size-5 has-shadow no-shadow-hover" href="/">
               Home
             </a>
-            <a className="navbar-item has-text-white" href="/menu">
+            <a className="navbar-item has-text-white has-text-weight-bold is-size-5 has-shadow no-shadow-hover" href="/menu">
               Menu
             </a>
-            <a className="navbar-item has-text-white" href="/contact">
+            <a className="navbar-item has-text-white has-text-weight-bold is-size-5 has-shadow no-shadow-hover" href="/contact">
               Contact
             </a>
-            <a className="navbar-item has-text-white" href="/about">
+            <a className="navbar-item has-text-white has-text-weight-bold is-size-5 has-shadow no-shadow-hover" href="/about">
               About
             </a>
           </div>
