@@ -9,7 +9,7 @@ const Navbar = () => {
       <div className="container">
         <div className="navbar-brand">
           <a className="navbar-item" href="/">
-            <img src="https://bulma.io/images/bulma-logo-white.png" alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28" />
+            <div className="is-size-3 has-text-centered has-text-weight-bold has-text-warning">Pizza Planet</div>
           </a>
           <button
             onClick={() => {
@@ -29,7 +29,7 @@ const Navbar = () => {
           </button>
         </div>
         <div className={`navbar-menu has-background-info ${isActive ? 'is-active' : ''}`}>
-          <div className="navbar-start">
+          <div className="navbar-end">
             <a className="navbar-item has-text-white" href="/">
               Home
             </a>
