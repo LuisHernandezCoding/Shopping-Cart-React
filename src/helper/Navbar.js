@@ -1,5 +1,6 @@
 import './Navbar.css';
 import React, { useState } from 'react';
+import Logo from '../images/Pizza.png';
 
 const Navbar = () => {
   const [isActive, setIsActive] = useState(false);
@@ -8,8 +9,11 @@ const Navbar = () => {
     <nav className="navbar has-background-info" role="navigation" aria-label="main navigation">
       <div className="container">
         <div className="navbar-brand">
-          <a className="navbar-item" href="/">
-            <div className="is-size-3 has-text-centered has-text-weight-bold has-text-warning">Pizza Planet</div>
+          <a className="navbar-item animate__animated animate__delay animate__lightSpeedInLeft" href="/">
+            <div className="is-size-3 has-text-centered has-text-weight-bold has-text-warning is-flex is-flex-direction-row is-align-items-center">
+              <img src={Logo} alt="Pizza Planet" className="image" />
+              <span className="ml-4">Pizza Planet</span>
+            </div>
           </a>
           <button
             onClick={() => {
@@ -18,7 +22,8 @@ const Navbar = () => {
             onKeyDown={() => {}}
             type="button"
             tabIndex={0}
-            className={`navbar-burger burger is-rounded has-text-white ${isActive ? 'is-active' : ''}`}
+            className={`navbar-burger burger is-rounded has-text-white animate__animated animate__delay animate__slideInRight
+              ${isActive ? 'is-active' : ''}`}
             aria-label="menu"
             aria-expanded="false"
             data-target="navbarBasicExample"
