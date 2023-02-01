@@ -2,7 +2,7 @@ import Food from '../images/food.jpg';
 
 const About = () => (
   <div>
-    <div className="container">
+    <div className="container has-shadow">
       <hr className="animate__animated animate__fadeIn animate__delay-1s" />
       <h1 className="title is-1 has-text-white has-text-weight-bold animate__animated animate__slideInLeft animate__delay-1s">
         About us
