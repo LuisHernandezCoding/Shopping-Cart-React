@@ -19,7 +19,7 @@ function ContactForm() {
     );
   }
   return (
-    <form onSubmit={handleSubmit} className="box has-background-grey-dark animate__animated animate__delay-1s animate__fadeInUp">
+    <form onSubmit={handleSubmit} className="box has-background-black animate__animated animate__delay-1s animate__fadeInUp">
       <div className="field">
         <label className="label has-text-white" htmlFor="email">
           Email Address

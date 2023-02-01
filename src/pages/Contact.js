@@ -1,10 +1,10 @@
-import ContactForm from './ContactForm';
+import ContactForm from '../helper/ContactForm';
 
 const Contact = () => (
-  <div className="hero has-background-info is-fullwidth">
+  <div className="hero has-background-primary is-fullwidth">
     <div className="hero-body">
       <div className="container">
-        <h1 className="title is-1 is-spaced has-text-centered has-text-weight-bold has-text-warning animate__animated animate__delay-1s animate__zoomIn">
+        <h1 className="title is-1 is-spaced has-text-centered has-text-weight-bold has-text-white animate__animated animate__delay-1s animate__zoomIn">
           Get in touch
         </h1>
         <p className="subtitle is-5 has-text-white has-text-centered animate__animated animate__delay-1s animate__bounceIn">
@@ -18,7 +18,7 @@ const Contact = () => (
           <div className="column is-half">
             <hr className="animate__animated animate__delay-2s animate__fadeInUp" />
             <div className="is-flex is-flex-direction-column is-justify-content-center animate__animated animate__delay-1s animate__fadeInRightBig">
-              <h1 className="title is-1 has-text-centered has-text-weight-bold has-text-warning">
+              <h1 className="title is-1 has-text-centered has-text-weight-bold has-text-white">
                 Pizza Planet
               </h1>
               <p className="subtitle is-5 has-text-white has-text-centered">
