@@ -34,7 +34,7 @@ const Navbar = () => {
           </button>
         </div>
         <div className={`navbar-menu has-background-info ${isActive ? 'is-active' : ''}`}>
-          <div className="navbar-end">
+          <div className="navbar-end animate__animated animate__delay animate__fadeInDown">
             <a className="navbar-item has-text-white" href="/">
               Home
             </a>
