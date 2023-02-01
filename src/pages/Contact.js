@@ -22,10 +22,10 @@ const Contact = () => (
                 Pizza Planet
               </h1>
               <p className="subtitle is-5 has-text-white has-text-centered">
-                1234 Pizza Planet Way
+                1234 Milky Way
               </p>
               <p className="subtitle is-5 has-text-white has-text-centered">
-                Pizza Planet, CA 12345
+                Cumulus 19b, Solar System Cheese-137
               </p>
               <p className="subtitle is-5 has-text-white has-text-centered">
                 (123) 456-7890
