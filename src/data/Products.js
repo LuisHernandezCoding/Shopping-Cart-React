@@ -79,7 +79,7 @@ const Products = {
   sides: [
     {
       id: 9,
-      name: 'Mango Boneless Wings',
+      name: 'Mango Boneless',
       price: 7.99,
       image: bonelessMango,
       ingredients: 'Mango sauce, mozzarella, tomato sauce',
