@@ -1,8 +1,8 @@
-.card {
+.card.item {
   width: 100%;
   transition: all 0.3s ease-in-out;
 }
 
-.card:hover {
+.card.item:hover {
   transform: scale(1.1);
 }

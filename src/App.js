@@ -43,11 +43,22 @@ const App = () => {
     localStorage.setItem('cart', JSON.stringify(newCart));
   };
 
+  const getCart = () => cart;
+
+  const checkoutCart = () => {
+    setCart([]);
+    localStorage.setItem('cart', JSON.stringify([]));
+    // eslint-disable-next-line no-alert
+    alert('Thank you for your order!');
+  };
+
   const cartMethods = {
     addItemToCart,
     removeItemFromCart,
     clearCart,
     updateItemQuantity,
+    getCart,
+    checkoutCart,
   };
 
   return (
@@ -56,7 +67,7 @@ const App = () => {
 
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/menu" element={<Menu cartMethods={cartMethods} />} />
+        <Route path="/menu" element={<Menu cart={cart} cartMethods={cartMethods} />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/about" element={<About />} />
         <Route path="/cart" element={<Cart cart={cart} cartMethods={cartMethods} />} />

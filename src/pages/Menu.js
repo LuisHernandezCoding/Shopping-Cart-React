@@ -9,12 +9,14 @@ const Menu = ({ cartMethods }) => {
     addItemToCart,
     removeItemFromCart,
     updateItemQuantity,
+    getCart,
   } = cartMethods;
 
   const itemMethods = {
     addItemToCart,
     removeItemFromCart,
     updateItemQuantity,
+    getCart,
   };
 
   return (
@@ -35,7 +37,9 @@ const Menu = ({ cartMethods }) => {
               </h1>
               <div className="columns is-centered is-multiline">
                 {Products.favoritePizzas.map((pizza) => (
-                  <MenuItem key={pizza.id} item={pizza} itemMethods={itemMethods} />
+                  <div className="column is-quarter" key={pizza.id}>
+                    <MenuItem item={pizza} itemMethods={itemMethods} />
+                  </div>
                 ))}
               </div>
             </div>
@@ -46,7 +50,9 @@ const Menu = ({ cartMethods }) => {
               </h1>
               <div className="columns is-centered is-multiline">
                 {Products.specialtyPizzas.map((pizza) => (
-                  <MenuItem key={pizza.id} item={pizza} itemMethods={itemMethods} />
+                  <div className="column is-quarter" key={pizza.id}>
+                    <MenuItem item={pizza} itemMethods={itemMethods} />
+                  </div>
                 ))}
               </div>
             </div>
@@ -57,7 +63,9 @@ const Menu = ({ cartMethods }) => {
               </h1>
               <div className="columns is-centered is-multiline">
                 {Products.sides.map((side) => (
-                  <MenuItem key={side.id} item={side} itemMethods={itemMethods} />
+                  <div className="column is-quarter" key={side.id}>
+                    <MenuItem item={side} itemMethods={itemMethods} />
+                  </div>
                 ))}
               </div>
             </div>
@@ -68,7 +76,9 @@ const Menu = ({ cartMethods }) => {
               </h1>
               <div className="columns is-centered is-multiline">
                 {Products.drinks.map((drink) => (
-                  <MenuItem key={drink.id} item={drink} itemMethods={itemMethods} />
+                  <div className="column is-quarter" key={drink.id}>
+                    <MenuItem item={drink} itemMethods={itemMethods} />
+                  </div>
                 ))}
               </div>
             </div>
@@ -85,6 +95,7 @@ Menu.propTypes = {
     removeItemFromCart: PropTypes.func.isRequired,
     clearCart: PropTypes.func.isRequired,
     updateItemQuantity: PropTypes.func.isRequired,
+    getCart: PropTypes.func.isRequired,
   }).isRequired,
 };
 

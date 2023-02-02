@@ -4,7 +4,12 @@ import { useState } from 'react';
 const MenuItem = ({ item, itemMethods }) => {
   const [quantity, setQuantity] = useState(1);
 
-  const { addItemToCart } = itemMethods;
+  const {
+    addItemToCart,
+    getCart,
+    removeItemFromCart,
+    updateItemQuantity,
+  } = itemMethods;
 
   const {
     id,
@@ -14,12 +19,13 @@ const MenuItem = ({ item, itemMethods }) => {
     ingredients,
   } = item;
 
+  const cart = getCart();
+
   return (
     <div
-      key={id}
-      className="column is-quarter animate__animated animate__delay-1s animate__zoomIn"
+      className="animate__animated animate__delay-1s animate__zoomIn"
     >
-      <div className="card">
+      <div className="card item has-background-black has-text-white">
         <div className="card-image">
           <figure className="image is-4by3">
             <img src={image} alt={name} />
@@ -28,34 +34,89 @@ const MenuItem = ({ item, itemMethods }) => {
         <div className="card-content">
           <div className="media">
             <div className="media-content">
-              <p className="title is-4">{name}</p>
-              <p className="subtitle is-6">
-                <span className="icon">
-                  <i className="fas fa-dollar-sign" />
+              <p className="title is-5 has-text-white is-flex is-justify-content-space-between">
+                {name}
+                <span className="has-text-white is-flex is-align-items-center">
+                  <span className="icon">
+                    <i className="fas fa-dollar-sign" />
+                  </span>
+                  {price}
                 </span>
-                {price}
               </p>
             </div>
           </div>
           <div className="content">
             {ingredients}
             <hr className="menu-item-divider has-background-grey-lighter" />
-            <div className="buttons is-right">
-              <input type="number" className="column is-half input button is-small" min="1" max="10" defaultValue="1" onChange={(e) => setQuantity(e.target.value)} />
-              <button
-                type="button"
-                className="button is-success"
-                onClick={() => addItemToCart({
-                  id,
-                  name,
-                  price,
-                  quantity,
-                  image,
-                })}
-              >
-                Add to cart
-              </button>
-            </div>
+            {cart.find((item) => item.id === id) ? (
+              <div className="field has-addons">
+                <div className="control">
+                  <button
+                    type="button"
+                    className="button is-danger"
+                    onClick={() => {
+                      if (cart.find((item) => item.id === id).quantity > 1) {
+                        // make async call to update quantity
+                        const newQuantity = cart.find((item) => item.id === id).quantity - 1;
+                        setQuantity(newQuantity);
+                        updateItemQuantity(item, newQuantity);
+                      } else {
+                        removeItemFromCart(item);
+                      }
+                    }}
+                  >
+                    -
+                  </button>
+                </div>
+                <div className="control">
+                  <input
+                    className="input"
+                    type="text"
+                    value={cart.find((item) => item.id === id).quantity}
+                    readOnly
+                  />
+                </div>
+                <div className="control">
+                  <button
+                    type="button"
+                    className="button is-success"
+                    onClick={
+                      () => {
+                        setQuantity(cart.find((item) => item.id === id).quantity + 1);
+                        updateItemQuantity(item, cart.find((item) => item.id === id).quantity + 1);
+                      }
+                    }
+                  >
+                    +
+                  </button>
+                </div>
+              </div>
+            ) : (
+              <div className="buttons is-right">
+                <input
+                  type="number"
+                  className="column is-half input button is-small"
+                  min="1"
+                  max="10"
+                  defaultValue="1"
+                  onChange={(e) => setQuantity(e.target.value)}
+                />
+                <button
+                  type="button"
+                  className="button is-success"
+                  onClick={() => addItemToCart({
+                    id,
+                    name,
+                    price,
+                    quantity,
+                    image,
+                    ingredients,
+                  })}
+                >
+                  Add to cart
+                </button>
+              </div>
+            )}
           </div>
         </div>
       </div>
@@ -75,6 +136,7 @@ MenuItem.propTypes = {
     addItemToCart: PropTypes.func.isRequired,
     removeItemFromCart: PropTypes.func.isRequired,
     updateItemQuantity: PropTypes.func.isRequired,
+    getCart: PropTypes.func.isRequired,
   }).isRequired,
 };
 
