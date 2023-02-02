@@ -1,9 +1,10 @@
 import { PropTypes } from 'prop-types';
 import { useState } from 'react';
-import './MenuItem.css';
 
-const MenuItem = ({ item, addToCart }) => {
+const MenuItem = ({ item, itemMethods }) => {
   const [quantity, setQuantity] = useState(1);
+
+  const { addItemToCart } = itemMethods;
 
   const {
     id,
@@ -41,7 +42,17 @@ const MenuItem = ({ item, addToCart }) => {
             <hr className="menu-item-divider has-background-grey-lighter" />
             <div className="buttons is-right">
               <input type="number" className="column is-half input button is-small" min="1" max="10" defaultValue="1" onChange={(e) => setQuantity(e.target.value)} />
-              <button type="button" className="button is-success" onClick={() => addToCart(item, quantity)}>
+              <button
+                type="button"
+                className="button is-success"
+                onClick={() => addItemToCart({
+                  id,
+                  name,
+                  price,
+                  quantity,
+                  image,
+                })}
+              >
                 Add to cart
               </button>
             </div>
@@ -60,7 +71,11 @@ MenuItem.propTypes = {
     image: PropTypes.string.isRequired,
     ingredients: PropTypes.string.isRequired,
   }).isRequired,
-  addToCart: PropTypes.func.isRequired,
+  itemMethods: PropTypes.shape({
+    addItemToCart: PropTypes.func.isRequired,
+    removeItemFromCart: PropTypes.func.isRequired,
+    updateItemQuantity: PropTypes.func.isRequired,
+  }).isRequired,
 };
 
 export default MenuItem;

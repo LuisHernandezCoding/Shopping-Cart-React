@@ -1,10 +1,11 @@
 import './Navbar.css';
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
+
 import Logo from '../images/Pizza.png';
 
-const Navbar = () => {
+const Navbar = ({ cartQuantity }) => {
   const [isActive, setIsActive] = useState(false);
-
   return (
     <nav className="navbar has-background-primary" role="navigation" aria-label="main navigation">
       <div className="container">
@@ -53,7 +54,7 @@ const Navbar = () => {
               <div className="buttons">
                 <a className="button is-white" href="/cart">
                   <strong className="is-size-5">
-                    0
+                    {cartQuantity || 0}
                   </strong>
                   <span className="icon">
                     <i className="fas fa-shopping-cart" />
@@ -66,6 +67,10 @@ const Navbar = () => {
       </div>
     </nav>
   );
+};
+
+Navbar.propTypes = {
+  cartQuantity: PropTypes.number.isRequired,
 };
 
 export default Navbar;
