@@ -1,6 +1,6 @@
 import { PropTypes } from 'prop-types';
 
-import MenuItem from '../components/MenuItem';
+import MenuItem from '../components/MenuItem/MenuItem';
 
 const Cart = ({ cartMethods }) => {
   const {
@@ -43,7 +43,7 @@ const Cart = ({ cartMethods }) => {
               <div className="columns is-centered is-multiline">
                 {cart.map((item) => (
                   <div className="column is-half" key={item.id}>
-                    <MenuItem item={item} itemMethods={itemMethods} />
+                    <MenuItem item={item} itemMethods={itemMethods} cart={cart} />
                   </div>
                 ))}
               </div>

@@ -2,7 +2,7 @@ import { PropTypes } from 'prop-types';
 
 import './Menu.css';
 import Products from '../data/Products';
-import MenuItem from '../components/MenuItem';
+import MenuItem from '../components/MenuItem/MenuItem';
 
 const Menu = ({ cartMethods }) => {
   const {
@@ -18,6 +18,8 @@ const Menu = ({ cartMethods }) => {
     updateItemQuantity,
     getCart,
   };
+
+  const cart = getCart();
 
   return (
     <div className="hero has-background-primary is-fullwidth">
@@ -38,7 +40,7 @@ const Menu = ({ cartMethods }) => {
               <div className="columns is-centered is-multiline">
                 {Products.favoritePizzas.map((pizza) => (
                   <div className="column is-quarter" key={pizza.id}>
-                    <MenuItem item={pizza} itemMethods={itemMethods} />
+                    <MenuItem item={pizza} itemMethods={itemMethods} cart={cart} />
                   </div>
                 ))}
               </div>
@@ -51,7 +53,7 @@ const Menu = ({ cartMethods }) => {
               <div className="columns is-centered is-multiline">
                 {Products.specialtyPizzas.map((pizza) => (
                   <div className="column is-quarter" key={pizza.id}>
-                    <MenuItem item={pizza} itemMethods={itemMethods} />
+                    <MenuItem item={pizza} itemMethods={itemMethods} cart={cart} />
                   </div>
                 ))}
               </div>
@@ -64,7 +66,7 @@ const Menu = ({ cartMethods }) => {
               <div className="columns is-centered is-multiline">
                 {Products.sides.map((side) => (
                   <div className="column is-quarter" key={side.id}>
-                    <MenuItem item={side} itemMethods={itemMethods} />
+                    <MenuItem item={side} itemMethods={itemMethods} cart={cart} />
                   </div>
                 ))}
               </div>
@@ -77,7 +79,7 @@ const Menu = ({ cartMethods }) => {
               <div className="columns is-centered is-multiline">
                 {Products.drinks.map((drink) => (
                   <div className="column is-quarter" key={drink.id}>
-                    <MenuItem item={drink} itemMethods={itemMethods} />
+                    <MenuItem item={drink} itemMethods={itemMethods} cart={cart} />
                   </div>
                 ))}
               </div>
