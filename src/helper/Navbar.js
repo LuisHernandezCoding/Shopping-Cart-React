@@ -1,6 +1,7 @@
 import './Navbar.css';
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import { NavLink } from 'react-router-dom';
 
 import Logo from '../images/Pizza.png';
 
@@ -36,30 +37,27 @@ const Navbar = ({ cartQuantity }) => {
         </div>
         <div className={`navbar-menu has-background-primary ${isActive ? 'is-active' : ''}`}>
           <div className="navbar-start animate__animated animate__delay animate__fadeInDown">
-            <a className="navbar-item has-text-white has-text-weight-bold is-size-5 has-shadow no-shadow-hover" href="/">
+            <NavLink className="navbar-item has-text-white has-text-weight-bold is-size-5 has-shadow no-shadow-hover" to="/">
               Home
-            </a>
-            <a className="navbar-item has-text-white has-text-weight-bold is-size-5 has-shadow no-shadow-hover" href="/menu">
+            </NavLink>
+            <NavLink className="navbar-item has-text-white has-text-weight-bold is-size-5 has-shadow no-shadow-hover" to="/menu">
               Menu
-            </a>
-            <a className="navbar-item has-text-white has-text-weight-bold is-size-5 has-shadow no-shadow-hover" href="/contact">
+            </NavLink>
+            <NavLink className="navbar-item has-text-white has-text-weight-bold is-size-5 has-shadow no-shadow-hover" to="/contact">
               Contact
-            </a>
-            <a className="navbar-item has-text-white has-text-weight-bold is-size-5 has-shadow no-shadow-hover" href="/about">
-              About
-            </a>
+            </NavLink>
           </div>
           <div className="navbar-end animate__animated animate__delay animate__fadeInDown">
             <div className="navbar-item">
               <div className="buttons">
-                <a className="button is-white" href="/cart">
+                <NavLink className="button is-white" to="/cart">
                   <strong className="is-size-5">
                     {cartQuantity || 0}
                   </strong>
                   <span className="icon">
                     <i className="fas fa-shopping-cart" />
                   </span>
-                </a>
+                </NavLink>
               </div>
             </div>
           </div>

@@ -62,7 +62,7 @@ const App = () => {
   };
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/Shopping-Cart-React">
       <Navbar cartQuantity={cart.length} />
 
       <Routes>
