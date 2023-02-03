@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MenuItem should render correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="animate__animated animate__delay-1s animate__zoomIn"
+  >
+    <div
+      class="card item has-background-black has-text-white"
+    >
+      <div
+        class="card-image"
+      >
+        <figure
+          class="image is-4by3"
+        >
+          <img
+            alt="Test Item"
+            src="test.jpg"
+          />
+        </figure>
+      </div>
+      <div
+        class="card-content"
+      >
+        <div
+          class="media"
+        >
+          <div
+            class="media-content"
+          >
+            <p
+              class="title is-5 has-text-white is-flex is-justify-content-space-between"
+            >
+              Test Item
+              <span
+                class="has-text-white is-flex is-align-items-center"
+              >
+                <span
+                  class="icon"
+                >
+                  <i
+                    class="fas fa-dollar-sign"
+                  />
+                </span>
+                10
+              </span>
+            </p>
+          </div>
+        </div>
+        <div
+          class="content"
+        >
+          Test ingredients
+          <hr
+            class="menu-item-divider has-background-grey-lighter"
+          />
+          <div
+            class="buttons is-right"
+          >
+            <input
+              class="column is-half input button is-small"
+              max="10"
+              min="1"
+              type="number"
+              value="1"
+            />
+            <button
+              class="button is-success"
+              type="button"
+            >
+              Add to cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
