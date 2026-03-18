@@ -1,70 +1,80 @@
-# Getting Started with Create React App
+# Project Name: Shopping Cart React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Short Description
+This is a simple shopping cart app built with React. It uses React Hooks and Context API to manage the state of the app.
+It also uses React Router to handle the routing of the app and its its made thinking in mobile first
+and tested out with jest and react testing library.
 
-## Available Scripts
+## Previews
+![Previews](https://user-images.githubusercontent.com/112588805/216218017-639c3207-0ace-4702-b086-5e240733be41.jpg)
+![Mockup](https://user-images.githubusercontent.com/112588805/216218021-fdb56a0e-ef7c-4e8c-9121-2495f3aa57de.jpg)
 
-In the project directory, you can run:
+## Live Demo
+[Live Demo Link](https://luishernandezcoding.github.io/Shopping-Cart-React/)
 
-### `npm start`
+## Long Description
+In this project I built a simple shopping cart app with React. It uses React Hooks and Context API to manage the state of the app 
+also uses React Router to handle the routing of the app and its its made thinking in mobile first, tested out with jest and react testing library.
+The app has a list of products, a shopping cart and a checkout page. The user can add products to the cart, remove products from the cart,
+increase or decrease the quantity of the products in the cart and also checkout the products in the cart.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Its made as a project of the React module in [The Odin Project](https://www.theodinproject.com/) curriculum.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Features
+- Add products to the cart
+- Remove products from the cart
+- Increase or decrease the quantity of the products in the cart
+- Checkout the products in the cart
 
-### `npm test`
+## Learning Outcomes
+- JavaScript
+- React Hooks
+- React Context API
+- React Router
+- Jest
+- React Testing Library
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Built With
+- Javascript
+- NPM
+- React
+- React Hooks
+- React Context API
+- React Router
+- Jest
+- React Testing Library
+- Local Storage
+- VS Code
+- Git
+- Github
+- Git Flow
+- ESLint
+- Stylelint
+- Webhint
 
-### `npm run build`
+## Getting Started
+To get a local copy up and running follow these simple example steps.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Prerequisites
+- Node.js
+- NPM
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Setup
+- Clone the repository to your local machine
+- Open the terminal and navigate to the project folder
+- Run `npm install` to install the dependencies
+- Run `npm start` to start the server
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Usage
+- Open the terminal and navigate to the project folder
+- Run `npm start` to start the server
+- Open your browser and go to `http://localhost:3000/`
 
-### `npm run eject`
+## Authors
+👤 **Luis Hernandez**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- GitHub: [@LuisHernandezCoding](https://github.com/LuisHernandezCoding)
+- LinkedIn: [Luis Hernandez](https://www.linkedin.com/in/luis-hernandez-coding/)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Credits:
+- [The Odin Project](https://www.theodinproject.com/)
